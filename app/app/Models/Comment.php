@@ -9,7 +9,7 @@ use Orchid\Screen\AsSource;
 use Orchid\Attachment\Attachable;
 
 
-class Comment extends Model
+class Comment extends Model //v
 {
     use HasFactory
     , AsSource
