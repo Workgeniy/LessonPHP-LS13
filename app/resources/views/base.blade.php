@@ -34,8 +34,7 @@
             <li class="nav-item"><a href="{{route('registration')}}" class="nav-link">Registration</a></li>
 
 
-            <li class="nav-item"><a href="#" class="nav-link"><img src="assets/imgs/placeholder.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, weber Landing page"></a></li>
-            
+            <li class="nav-item"><a href="{{route('res')}}" class="nav-link">Reset Pasword</a></li>            
             
             <li class="nav-item"><a href="{{route('about')}}" class="nav-link">About</a></li>
 

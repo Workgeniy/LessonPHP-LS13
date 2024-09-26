@@ -25,8 +25,10 @@ class RegistrationController extends Controller
             'name' => 'required|max:255', 
             'email' => 'required|email',
             'password' => 'required|min:5|max:32',
-            'res_password' => 'required|min:5|max:32'
+            'res' => 'required|min:5|max:32'
         ]);
+
+        if ($validated['password'] === $validated['res']){
 
         $user = new User();
         
@@ -37,6 +39,14 @@ class RegistrationController extends Controller
         $user->save();
 
         return redirect()->route('login')->with('status', 'User created');
+    }
+    
+
+        else
+        {
+            echo 'Incorrect password';
+            return redirect()-> route('registration')->with('status', 'Incorrect password');
+        }
     }
 
     

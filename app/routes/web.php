@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\ResController;
 
 Route::get('/', function () {
     return view('main', ['phone' => config('top.phone')]);
@@ -26,3 +26,8 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::post('/login', 
     [LoginController::class, 'post'])->name('login.post');
+
+    Route::get('/res', [ResController::class, 'index'])->name('res');
+
+Route::post('/res', 
+    [ResController::class, 'post'])->name('res.post');
