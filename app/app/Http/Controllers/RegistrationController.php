@@ -24,7 +24,8 @@ class RegistrationController extends Controller
         $validated = $request->validate([
             'name' => 'required|max:255', 
             'email' => 'required|email',
-            'password' => 'required|min:5|max:32'
+            'password' => 'required|min:5|max:32',
+            'res_password' => 'required|min:5|max:32'
         ]);
 
         $user = new User();
