@@ -21,7 +21,23 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|max:255', 
+            'text' => 'required',
+            'mark' => 'required|numeric'
+        ]);
+
+        $post = new Post();
+        
+        $post->user_id = 1;
+
+        $post->title = $validated['title'];
+        $post->text = $validated['text'];
+        $post->mark = $validated['mark'];
+
+        $post->save();
+
+        return redirect()->route('post')->with('status', 'Post created');
     }
 
     /**

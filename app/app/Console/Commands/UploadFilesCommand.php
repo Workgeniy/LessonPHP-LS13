@@ -29,10 +29,6 @@ class UploadFilesCommand extends Command
      */
     public function handle()
     {
-        $file = "./app/public/robots.txt"; // image
-
-        if (is_file($file)){
-           Storage::put('robots.txt', File::get($file));
-        }
+        //
     }
 }
